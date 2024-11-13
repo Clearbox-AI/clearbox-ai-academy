@@ -1,0 +1,53 @@
+2024-11-11 13:57:17,582 - WARNING - root - This is a general warning message.
+2024-11-11 13:57:17,583 - DEBUG - haystack - This is a debug message specifically for the Haystack logger.
+2024-11-11 13:57:17,870 - DEBUG - urllib3.connectionpool - https://huggingface.co:443 "HEAD /deepset/roberta-base-squad2-distilled/resolve/main/config.json HTTP/11" 200 0
+2024-11-11 13:57:18,320 - DEBUG - urllib3.connectionpool - https://huggingface.co:443 "HEAD /deepset/roberta-base-squad2-distilled/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-11 13:57:18,505 - DEBUG - haystack.core.pipeline.base - Adding component 'retriever' (<haystack.components.retrievers.in_memory.bm25_retriever.InMemoryBM25Retriever object at 0x000002B6AB1C1090>
+
+Inputs:
+  - query: str
+  - filters: Optional[Dict[str, Any]]
+  - top_k: Optional[int]
+  - scale_score: Optional[bool]
+Outputs:
+  - documents: List[Document])
+2024-11-11 13:57:18,508 - DEBUG - haystack.core.pipeline.base - Adding component 'reader' (<haystack.components.readers.extractive.ExtractiveReader object at 0x000002B6A7617A90>
+
+Inputs:
+  - query: str
+  - documents: List[Document]
+  - top_k: Optional[int]
+  - score_threshold: Optional[float]
+  - max_seq_length: Optional[int]
+  - stride: Optional[int]
+  - max_batch_size: Optional[int]
+  - answers_per_seq: Optional[int]
+  - no_answer: Optional[bool]
+  - overlap_threshold: Optional[float]
+Outputs:
+  - answers: List[ExtractedAnswer])
+2024-11-11 13:57:18,509 - DEBUG - haystack.core.pipeline.base - Connecting 'retriever.documents' to 'reader.documents'
+2024-11-11 13:57:18,510 - INFO - haystack.core.pipeline.base - Warming up component reader...
+2024-11-11 13:57:18,512 - INFO - haystack.core.pipeline.pipeline - Running component retriever
+2024-11-11 13:57:18,515 - DEBUG - haystack.tracing.logging_tracer - Operation: haystack.component.run
+2024-11-11 13:57:18,516 - DEBUG - haystack.tracing.logging_tracer - [1;34mhaystack.component.name=retriever[0m
+2024-11-11 13:57:18,517 - DEBUG - haystack.tracing.logging_tracer - haystack.component.type=InMemoryBM25Retriever[0m
+2024-11-11 13:57:18,518 - DEBUG - haystack.tracing.logging_tracer - haystack.component.input_types={'query': 'str', 'top_k': 'int', 'filters': 'NoneType', 'scale_score': 'NoneType'}[0m
+2024-11-11 13:57:18,523 - DEBUG - haystack.tracing.logging_tracer - haystack.component.input_spec={'query': {'type': 'str', 'senders': []}, 'filters': {'type': 'typing.Optional[typing.Dict[str, typing.Any]]', 'senders': []}, 'top_k': {'type': 'typing.Optional[int]', 'senders': []}, 'scale_score': {'type': 'typing.Optional[bool]', 'senders': []}}[0m
+2024-11-11 13:57:18,526 - DEBUG - haystack.tracing.logging_tracer - haystack.component.output_spec={'documents': {'type': 'typing.List[haystack.dataclasses.document.Document]', 'receivers': ['reader']}}[0m
+2024-11-11 13:57:18,528 - DEBUG - haystack.tracing.logging_tracer - haystack.component.visits=1[0m
+2024-11-11 13:57:18,530 - INFO - haystack.core.pipeline.pipeline - Running component reader
+2024-11-11 13:57:18,684 - DEBUG - urllib3.connectionpool - Resetting dropped connection: eu.i.posthog.com
+2024-11-11 13:57:18,815 - DEBUG - urllib3.connectionpool - https://eu.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-11 13:57:18,842 - DEBUG - haystack.tracing.logging_tracer - Operation: haystack.component.run
+2024-11-11 13:57:18,844 - DEBUG - haystack.tracing.logging_tracer - [1;34mhaystack.component.name=reader[0m
+2024-11-11 13:57:18,845 - DEBUG - haystack.tracing.logging_tracer - haystack.component.type=ExtractiveReader[0m
+2024-11-11 13:57:18,847 - DEBUG - haystack.tracing.logging_tracer - haystack.component.input_types={'query': 'str', 'top_k': 'int', 'score_threshold': 'NoneType', 'max_seq_length': 'NoneType', 'stride': 'NoneType', 'max_batch_size': 'NoneType', 'answers_per_seq': 'NoneType', 'no_answer': 'NoneType', 'overlap_threshold': 'NoneType', 'documents': 'list'}[0m
+2024-11-11 13:57:18,848 - DEBUG - haystack.tracing.logging_tracer - haystack.component.input_spec={'query': {'type': 'str', 'senders': []}, 'documents': {'type': 'typing.List[haystack.dataclasses.document.Document]', 'senders': ['retriever']}, 'top_k': {'type': 'typing.Optional[int]', 'senders': []}, 'score_threshold': {'type': 'typing.Optional[float]', 'senders': []}, 'max_seq_length': {'type': 'typing.Optional[int]', 'senders': []}, 'stride': {'type': 'typing.Optional[int]', 'senders': []}, 'max_batch_size': {'type': 'typing.Optional[int]', 'senders': []}, 'answers_per_seq': {'type': 'typing.Optional[int]', 'senders': []}, 'no_answer': {'type': 'typing.Optional[bool]', 'senders': []}, 'overlap_threshold': {'type': 'typing.Optional[float]', 'senders': []}}[0m
+2024-11-11 13:57:18,851 - DEBUG - haystack.tracing.logging_tracer - haystack.component.output_spec={'answers': {'type': 'typing.List[haystack.dataclasses.answer.ExtractedAnswer]', 'receivers': []}}[0m
+2024-11-11 13:57:18,853 - DEBUG - haystack.tracing.logging_tracer - haystack.component.visits=1[0m
+2024-11-11 13:57:18,855 - DEBUG - haystack.tracing.logging_tracer - Operation: haystack.pipeline.run
+2024-11-11 13:57:18,859 - DEBUG - haystack.tracing.logging_tracer - haystack.pipeline.input_data={'retriever': {'query': 'What is the capital of France?', 'top_k': 3, 'filters': None, 'scale_score': None}, 'reader': {'query': 'What is the capital of France?', 'top_k': 2, 'score_threshold': None, 'max_seq_length': None, 'stride': None, 'max_batch_size': None, 'answers_per_seq': None, 'no_answer': None, 'overlap_threshold': None}}[0m
+2024-11-11 13:57:18,864 - DEBUG - haystack.tracing.logging_tracer - haystack.pipeline.output_data={'reader': {'answers': [ExtractedAnswer(query='What is the capital of France?', score=0.8202996850013733, data='Paris', document=Document(id=0f5beda04153dbfc462c8b31f8536749e43654709ecf0cfe22c6d009c9912214, content: 'Paris is the capital of France.', score: 1.9188925512689656), context=None, document_offset=ExtractedAnswer.Span(start=0, end=5), context_offset=None, meta={}), ExtractedAnswer(query='What is the capital of France?', score=0.4222554862499237, data='France', document=Document(id=0f5beda04153dbfc462c8b31f8536749e43654709ecf0cfe22c6d009c9912214, content: 'Paris is the capital of France.', score: 1.9188925512689656), context=None, document_offset=ExtractedAnswer.Span(start=24, end=30), context_offset=None, meta={}), ExtractedAnswer(query='What is the capital of France?', score=0.10382087110961713, data=None, document=None, context=None, document_offset=None, context_offset=None, meta={})]}}[0m
+2024-11-11 13:57:18,866 - DEBUG - haystack.tracing.logging_tracer - haystack.pipeline.metadata={}[0m
+2024-11-11 13:57:18,867 - DEBUG - haystack.tracing.logging_tracer - haystack.pipeline.max_runs_per_component=100[0m
