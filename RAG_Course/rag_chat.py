@@ -12,6 +12,13 @@ HF_API_TOKEN = os.getenv("HF_API_TOKEN")
 OPENAI_API_TOKEN = os.getenv("OPENAI_API_TOKEN")
 WS_API_TOKEN = os.getenv("WS_API_TOKEN")
 
+LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
+LANGFUSE_PUBLIC_KEY= os.getenv("LANGFUSE_PUBLIC_KEY")
+
+os.environ["LANGFUSE_HOST"] = "https://cloud.langfuse.com"
+os.environ["HAYSTACK_CONTENT_TRACING_ENABLED"] = "True"
+os.environ["TOKENIZERS_PARALLELISM"] = "True"
+
 import json
 
 from typing import List, Optional
@@ -27,6 +34,7 @@ from haystack.components.websearch.serper_dev import SerperDevWebSearch
 
 from haystack_integrations.document_stores.elasticsearch import ElasticsearchDocumentStore
 from haystack_integrations.components.retrievers.elasticsearch import ElasticsearchEmbeddingRetriever
+from haystack_integrations.components.connectors.langfuse import LangfuseConnector
 
 
 document_store = ElasticsearchDocumentStore(hosts = "http://localhost:9200")
@@ -192,9 +200,12 @@ Documents:
 
 prompt_for_websearch = ChatMessage.from_user(prompt_for_websearch)
 chat_generator = OpenAIChatGenerator(model="gpt-4o-mini-2024-07-18", api_key=Secret.from_token(OPENAI_API_TOKEN))
+tracer = LangfuseConnector("RAG Chat")
+
 
 
 chat_agent = Pipeline()
+chat_agent.add_component("tracer", tracer)
 chat_agent.add_component("expander", QueryExpander(open_ai_key=Secret.from_token(OPENAI_API_TOKEN)))
 chat_agent.add_component("query_rephrase_prompt_builder", PromptBuilder(query_rephrase_template))
 chat_agent.add_component("query_rephrase_llm", OpenAIGenerator(api_key=Secret.from_token(OPENAI_API_TOKEN)))
