@@ -1,0 +1,18 @@
+def convert_to_training_dataset(row): 
+  formatted_data = {
+        "messages": [
+            {"role": "system", "content": row.instruction},
+            {"role": "user", "content": row.input},
+            {"role": "assistant", "content": row.output}
+        ]
+    }
+
+    with open("training_data.jsonl", "a") as json_file:
+        json.dump(formatted_data, json_file)
+        json_file.write("\n")
+
+
+
+
+for index,row in ds.iterrows():
+    convert_to_training_dataset(row)
