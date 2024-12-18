@@ -1,4 +1,4 @@
-**Clearbox AI Academy** 🚀🎓
+## **Clearbox AI Academy** 🚀🎓
 
 Welcome to **Clearbox AI Academy**! This repository is your gateway to mastering cutting-edge AI techniques and best practices. Whether you're an AI enthusiast, a data scientist, or a developer, we've got something exciting for you! 💡🤖
 
