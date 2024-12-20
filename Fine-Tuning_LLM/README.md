@@ -1,4 +1,4 @@
-# Fine-Tuning Large Language Models (LLMs) ✨🔄
+# Fine-Tuning Large Language Models (LLMs)
 
 Welcome to the **Fine-Tuning LLM Course**! This repository is your guide to customizing and fine-tuning **Large Language Models (LLMs)** for specific tasks and applications.
 
@@ -15,6 +15,18 @@ Whether you're building a domain-specific chatbot, text generator, or any applic
 ## 🌟 Acknowledgment
 
 The part on fine-tuning open-source LLMs draws inspiration from the incredible **[Hugging Face Smol Courses](https://github.com/huggingface/smol-course/tree/main)**. Huge thanks to the Hugging Face team for their contributions to the open-source AI community! 🙌
+
+## 📁 What's Inside
+
+- **Notebooks** 
+  Interactive tutorials to guide you through the fine-tuning process step-by-step.  
+
+
+- **Tools and Frameworks**  
+  Tutorials on using frameworks like Hugging Face's Transformers and Accelerate libraries, as well as the OpenAI API.  
+
+- **Best Practices**  
+  Tips and tricks for optimizing fine-tuning with PEFT techniques and avoiding common pitfalls.  
 
 ## 🤝 Contributions & Feedback
 
