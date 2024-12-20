@@ -14,7 +14,7 @@ Whether you're building a domain-specific chatbot, text generator, or any applic
 
 ## 🌟 Acknowledgment
 
-The part on fine-tuning open-source LLMs draws inspiration from the incredible **[Hugging Face Smol Courses](https://github.com/huggingface/smol-course/tree/main)**. Huge thanks to the Hugging Face team for their contributions to the open-source AI community! 🙌
+The part on fine-tuning open-source LLMs draws inspiration from the **[Hugging Face Smol Courses](https://github.com/huggingface/smol-course/tree/main)**. Huge thanks to the Hugging Face team for their contributions to the open-source AI community! 🙌
 
 ## 📁 What's Inside
 
