@@ -10,7 +10,7 @@ Welcome to **Clearbox AI Academy**! This repository is your gateway to mastering
 - **MLOps Course**  
    Explore the lifecycle of machine learning projects with MLOps. Learn how to deploy, monitor, and maintain AI models efficiently while embracing scalable and reproducible workflows.
 
-- **Finetuning LLM Course** *(Work in Progress)*  
+- **Finetuning LLM Course**   
    Uncover the secrets of customizing Large Language Models for specific tasks. Master techniques to fine-tune pre-trained models for enhanced performance in specialized applications.
 
 ### 🎯 Who Is This For?
