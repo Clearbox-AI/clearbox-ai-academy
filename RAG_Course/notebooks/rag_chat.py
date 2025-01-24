@@ -34,7 +34,7 @@ from haystack.components.websearch.serper_dev import SerperDevWebSearch
 
 from haystack_integrations.document_stores.elasticsearch import ElasticsearchDocumentStore
 from haystack_integrations.components.retrievers.elasticsearch import ElasticsearchEmbeddingRetriever
-from haystack_integrations.components.connectors.langfuse import LangfuseConnector
+#from haystack_integrations.components.connectors.langfuse import LangfuseConnector
 
 
 document_store = ElasticsearchDocumentStore(hosts = "http://localhost:9200")
@@ -141,7 +141,7 @@ If the answer is not contained within the documents, reply with 'no_answer'.
 
     Conversation history:
     {% for memory in memories %}
-        {{ memory.content }}
+        {{ memory.text }}
     {% endfor %}
 
     Supporting documents:
@@ -164,7 +164,7 @@ query_rephrase_template = """
 
         Conversation history:
         {% for memory in memories %}
-            {{ memory.content }}
+            {{ memory.text }}
         {% endfor %}
 
         User Query: {{query}}
@@ -200,12 +200,12 @@ Documents:
 
 prompt_for_websearch = ChatMessage.from_user(prompt_for_websearch)
 chat_generator = OpenAIChatGenerator(model="gpt-4o-mini-2024-07-18", api_key=Secret.from_token(OPENAI_API_TOKEN))
-tracer = LangfuseConnector("RAG Chat")
+#tracer = LangfuseConnector("RAG Chat")
 
 
 
 chat_agent = Pipeline()
-chat_agent.add_component("tracer", tracer)
+#chat_agent.add_component("tracer", tracer)
 chat_agent.add_component("expander", QueryExpander(open_ai_key=Secret.from_token(OPENAI_API_TOKEN)))
 chat_agent.add_component("query_rephrase_prompt_builder", PromptBuilder(query_rephrase_template))
 chat_agent.add_component("query_rephrase_llm", OpenAIGenerator(api_key=Secret.from_token(OPENAI_API_TOKEN)))
@@ -245,14 +245,14 @@ def chat(template, messages, user_input):
                                "prompt_builder_for_websearch": {"template":template_web,}},
                                 include_outputs_from={"expander", "generator", "router"})
     
-    if response['generator']['replies'][0].content != 'no_answer':
+    if response['generator']['replies'][0].text != 'no_answer':
         messages.append(ChatMessage.from_user(user_input))
         messages.extend(response['generator']['replies'])
-        return response['generator']['replies'][0].content
+        return response['generator']['replies'][0].text
     else:
         messages.append(ChatMessage.from_user(user_input))
         messages.extend(response['llm_for_websearch']['replies'])
-        return response['llm_for_websearch']['replies'][0].content
+        return response['llm_for_websearch']['replies'][0].text
 
 def main():
     st.title("💬 ChatGPT-style Chatbot")
