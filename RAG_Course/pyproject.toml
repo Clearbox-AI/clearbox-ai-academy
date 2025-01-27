@@ -1,0 +1,24 @@
+[project]
+name = "rag-course"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "elasticsearch-haystack>=1.0.1",
+    "haystack-ai>=2.9.0",
+    "ipykernel>=6.29.5",
+    "lxml-html-clean>=0.4.1",
+    "python-dotenv>=1.0.1",
+    "qdrant-haystack>=7.0.0",
+    "rich>=13.9.4",
+    "trafilatura>=2.0.0",
+]
+
+[tool.uv.workspace]
+members = ["RAG_Course"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
