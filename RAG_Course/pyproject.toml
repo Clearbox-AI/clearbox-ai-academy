@@ -9,6 +9,7 @@ dependencies = [
     "haystack-ai>=2.9.0",
     "ipykernel>=6.29.5",
     "lxml-html-clean>=0.4.1",
+    "nltk>=3.9.1",
     "python-dotenv>=1.0.1",
     "qdrant-haystack>=7.0.0",
     "rich>=13.9.4",
