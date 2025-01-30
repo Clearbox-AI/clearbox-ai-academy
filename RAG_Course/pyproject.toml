@@ -16,6 +16,7 @@ dependencies = [
     "qdrant-haystack>=7.0.0",
     "rich>=13.9.4",
     "sentence-transformers>=3.4.0",
+    "streamlit>=1.41.1",
     "trafilatura>=2.0.0",
     "transformers>=4.48.1",
 ]
