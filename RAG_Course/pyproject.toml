@@ -9,6 +9,7 @@ dependencies = [
     "elasticsearch-haystack>=1.0.1",
     "haystack-ai>=2.9.0",
     "ipykernel>=6.29.5",
+    "langfuse-haystack>=0.8.0",
     "lxml-html-clean>=0.4.1",
     "nltk>=3.9.1",
     "python-dotenv>=1.0.1",
