@@ -34,16 +34,11 @@ from haystack.components.websearch.serper_dev import SerperDevWebSearch
 
 from haystack_integrations.document_stores.elasticsearch import ElasticsearchDocumentStore
 from haystack_integrations.components.retrievers.elasticsearch import ElasticsearchEmbeddingRetriever
-#from haystack_integrations.components.connectors.langfuse import LangfuseConnector
 
 
 document_store = ElasticsearchDocumentStore(hosts = "http://localhost:9200")
 
-from haystack.components.converters.txt import TextFileToDocument
-from haystack.components.preprocessors.document_splitter import DocumentSplitter
-from haystack.components.embedders import SentenceTransformersDocumentEmbedder, SentenceTransformersTextEmbedder
-from haystack.components.writers import DocumentWriter
-from haystack.document_stores.types import DuplicatePolicy
+from haystack.components.embedders import SentenceTransformersTextEmbedder
 from haystack.components.converters import OutputAdapter
 
 
