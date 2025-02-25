@@ -24,12 +24,12 @@ The part on fine-tuning open-source LLMs draws inspiration from the **[Hugging F
   **Colab Notebooks**
   | Description | Colab Notebook
   | :---:  | :---:  |
-  | GPT Fine-Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/GPT%20Models/1_How_to_finetune_GPT_model_OpenAI_API.ipynb)
-  | HF Chat Template | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/2_chat_templates_example.ipynb)
-  | HF Supervised FT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/2_sft_finetuning_eval_example.ipynb)
-  | HF PEFT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/3_peft_lora.ipynb)
-  | HF DPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/DPO%20Finetuning/dpo_finetuning_example.ipynb)
-  | GPT DPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/DPO%20Finetuning/GPT_models_dpo.ipynb)
+  | GPT Fine-Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/GPT%20Models/1_How_to_finetune_GPT_model_OpenAI_API.ipynb)
+  | HF Chat Template | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/2_chat_templates_example.ipynb)
+  | HF Supervised FT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/2_sft_finetuning_eval_example.ipynb)
+  | HF PEFT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/Open%20Source%20Models/3_peft_lora.ipynb)
+  | HF DPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/DPO%20Finetuning/dpo_finetuning_example.ipynb)
+  | GPT DPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/Fine-Tuning_LLM/DPO%20Finetuning/GPT_models_dpo.ipynb)
 
 
 - **Tools and Frameworks**  
