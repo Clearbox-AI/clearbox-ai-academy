@@ -23,7 +23,7 @@ A big thanks to the **Haystack team** for their incredible contributions to the 
   | Description | Colab Notebook
   | :---:  | :---:  |
   | Indexing Pipeline | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/1_indexing_search_pipeline.ipynb)
-  | Generation - Rerank Pipeline | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/3_build_customized_rag_rerank.ipynb_indexing_search_pipeline.ipynb)
+  | Generation - Rerank Pipeline | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/3_build_customized_rag_rerank.ipynb)
   | Branching | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/5_fallbacks_branching.ipynb)
   | Conversational RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/6_conversational_rag.ipynb)
   | Query Expansion | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Clearbox-AI/clearbox-ai-academy/blob/main/RAG_Course/colab_notebooks/notebooks/7_query_expansion.ipynb)
